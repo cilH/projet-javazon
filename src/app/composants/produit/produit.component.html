@@ -1,18 +1,30 @@
 <h2 class="container">Produit</h2>
 <section>
     <div class="container mt-5 mb-2 input-group">
-        <input id="recherche" type="text" placeholder="Taper ici votre recherche"
-            class="form-control">
+        <input id="recherche" type="text" placeholder="Taper ici votre recherche" class="form-control">
         <button (click)="rechercherProduits()" class="btn btn-secondary">Rechercher</button>
     </div>
+    <div class="container miseEnPage mt-4">
+        <button><i style="color: cadetblue" class="fas fa-th-large fa-2xl"></i></button>
+        <button><i style="color: cadetblue" class="fas fa-th-list fa-2xl"></i></button>
+    </div>
 
-    <div class="container p-5 text-center">
-        <div class="row">
-            <ul *ngFor="elt of produits">
-                <li><img src="elt.src" alt="elt.description"></li>
-            </ul>
-
-        </div>
+    <div class="container">
+        <ul class="row">
+            <li class="col-xl-6 col-sm-12 produit p-4 mt-1" *ngFor="let elt of produits">
+                <div class="col-6"><img src="{{ elt.src }}" alt="{{ elt.description }}"></div>
+                <div class="detailsProduit col-6">
+                    <ul>
+                        <li>
+                            <h3>{{ elt.description }}</h3>
+                        </li>
+                        <li>Prix unitaire : {{ elt.prixUnitaire }} €</li>
+                        <li>Quantité disponible : {{ elt.quantite }}</li>
+                        <li></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
     </div>
 
 </section>

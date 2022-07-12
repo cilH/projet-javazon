@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: '', component: IdentificationComponent },
   { path: 'identification/:prenom/:nom', component: IdentificationComponent },
   { path: 'produit', component: ProduitComponent },
+  { path: 'produit/:id', component: ProduitComponent },
   { path: 'panier', component: PanierComponent },
   { path: 'erreur', component: ErreurComponent },
   { path: '**', redirectTo: 'erreur' }

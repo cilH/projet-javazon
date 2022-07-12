@@ -1,7 +1,37 @@
-<div class="container">
-<ul class="nav nav-tabs">
-    <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/">Identification</a></li>
-    <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/produit">Produit</a></li>
-    <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/panier">Panier</a></li>
-</ul>
-</div>
+<ng-container class="petitMenu" *ngIf="petitEcran == true, else grandEcran">
+    <div class="container">
+        <div class="offcanvas offcanvas-start" id="demo">
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title">Menu</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/"><i
+                                class="fas fa-user"></i>Identification</a></li>
+                    <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/produit"><i
+                                class="fas fa-table-tennis"></i>Produit</a></li>
+                    <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/panier"><i
+                                class="fas fa-shopping-cart"></i>Panier</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container-fluid mt-3" id="raccourci">
+            <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</ng-container>
+
+<ng-template class="container" #grandEcran>
+    <ul class="nav nav-tabs">
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/"><i
+                    class="fas fa-user"></i>Identification</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/produit"><i
+                    class="fas fa-table-tennis"></i>Produit</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/panier"><i
+                    class="fas fa-shopping-cart"></i>Panier</a></li>
+    </ul>
+</ng-template>

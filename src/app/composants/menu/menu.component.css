@@ -13,3 +13,15 @@ ul {
     justify-content: flex-end;
     margin-bottom: 15px;
 }
+.fas {
+    margin-right: 15px;
+}
+
+.offcanvas-body .nav {
+    display: flex;
+    flex-direction: column;
+}
+#raccourci {
+    display: flex;
+    justify-content: flex-end;
+}

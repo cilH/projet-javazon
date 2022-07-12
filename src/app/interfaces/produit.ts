@@ -4,4 +4,5 @@ export interface Produit {
     prixUnitaire?: number;
     src?: string;
     quantite?: number;
+    detail?: string;
 }

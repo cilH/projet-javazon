@@ -1,52 +1,100 @@
 {
-    "produits": [
-        { "id": 1,
-        "description": "Raquettes jungle",
-        "prixUnitaire": 5.99,
-        "src": "assets/images/raquetteJungle.jpg",
-        "quantite": 64,
-        "detail": "Idéal pour divertir un groupe d'enfants lors d'une fête, nos jeux seront une façon idéale de les occuper. De cette manière, les petits convives passeront un moment amusant, et ne risquent certainement pas de s'ennuyer. Raquette en bois avec boule en caoutchouc sur un élastique. 3 modèles d'animaux de la jungle différents (modèle suivant disponibilité). Taille: environ 23cm de long."},
-        { "id": 2,
-        "description": "Raquettes anti-moustique",
-        "prixUnitaire": 17.99,
-        "src": "assets/images/raquetteMoustique.jpg",
-        "quantite": 17,
-        "detail": "Raquette électrique anti-moustique, mouche, moucheron, etc. Cette tapette électrique anti insectes volants est redoutablement efficace! Vous ne serez plus gênés par des mouches ..."},
-        { "id": 3,
-        "description": "Raquettes de plage",
-        "prixUnitaire": 7.50,
-        "src": "assets/images/raquettePlage.jpg",
-        "quantite": 327,
-        "detail": "Envie de montrer à vos adversaires que vous n'êtes pas là pour vous amuser ? Des raquettes de plage en bois ornées des finitions en corde bleu marine emblématiques de Vilebrequin pour une prise en main parfaite devraient suffire. Avec des tortues en guise d'équipières, votre performance sera mémorable – peu importe qui gagne la partie."},
-        { "id": 4,
-        "description": "Raquettes paddle",
-        "prixUnitaire": 59,
-        "src": "assets/images/raquettePaddle.jpg",
-        "quantite": 25,
-        "detail": "Une raquette fun pour les juniors. A peine 300 grammes, un manche plus long pour les revers à deux mains, parfaite pour les plus jeunes !"},
-        { "id": 5,
-        "description": "Raquettes anti-moustique 5-en-1",
-        "prixUnitaire": 38.99,
-        "src": "assets/images/raquetteLampe.jpg",
-        "quantite": 1,
-        "detail": "Moustique rechargeable USB, chauve-souris, tueur de mouches... Conception spéciale : La lumière ultraviolette intégrée peut être utilisée comme tueur de moustiques. Lorsque le mode piégeage des moustiques est activé la nuit, cette bande lumineuse souriante spécialement conçue pour la sensibilité des moustiques stimulera l'instinct de phototaxie des moustiques et attirera les moustiques à voler vers la raquette haute tension. Il n'y a pas de rayonnement et il est sûr à utiliser. Nouveau design : La nouvelle conception à double protection du filet en plastique, la surface est protégée par du plastique, les deux couches avant et arrière sont des filets de protection de sécurité non chargés, et le milieu est la grille de travail avec l'électrode positive. Pour les humains, il s'agit d'une tension sûre à faible courant, mais pour les moustiques, il s'agit d'une tension forte. Inoffensif pour l'homme et l'environnement : En 3500 volts, l'électricité est utilisée pour tuer les parasites, et les 3 dernières couches de protection en maille de protection garantissent la sécurité des animaux domestiques et évitent les pulvérisations de bactéries nocives. Il est inoffensif pour l'homme et l'environnement.t. Batterie longue durée : Avec une batterie plomb-acide de 1200 mAh, la batterie peut être utilisée pendant 30 jours avec une seule charge. Il n'est pas nécessaire d'acheter des batteries séparées car le chargement USB est plus facile et plus pratique. Caractéristiques : Tension CC : 3500V Capacité de la batterie : 1200mAh Tension d'entrée : DC 5V Temps de charge : A peut près 2 heures Façons de tuer les moustiques : Cliquez pour tuer les moustiques Port de chargement : Interface Android Taille : 24x49cm/9.44x15.29in Taille de base : 8.8x3.8cm/3.46x1.49in Size : 49cm"},
-        { "id": 6,
-        "description": "Raquettes de neige",
-        "prixUnitaire": 25,
-        "src": "assets/images/raquetteNeige.jpg",
-        "quantite": 3,
-        "detail": "Les raquettes à neige TSL 325 Initial sont idéales pour les randonnées plaisir en terrain valonné. Les raquettes 325 Initial sont conçues pour les randonneurs et les randonneuses dont le poids est compris entre 50 et 120 kilos et la pointure entre 39 et 47. Chaussage rapide et marche naturelle. Les raquettes à neige TSL 325 Initial sont réputées pour permettre de chausser très rapidement grâce à leur serrage talonnière par sangle cou-de-pied à crémaillère. Ces raquettes sont également fortes de leur profil taille de guêpe qui permet d'adopter une marche naturelle. Très confortables, elles bénéficient d'une technologie permettant d'amortir les bruits et les chocs. Serrage fin et mémoire des réglages. Les raquettes 325 Initial présentent plusieurs systèmes de fixation et des réglages intuitifs : le système Boa Fit supprime les points de pression et répartit le serrage de façon uniforme. Le Lock Adjustment mémorise votre pointure et le Lateral Adjust permet d'intégrer toute largeur de chaussure. Pratique, le bloqueur fixation permet un transport et un rangement faciles.Très forte accroche grâce aux design 3D. Dans les dévers, la raquette 325 Initial offre une très forte accroche grâce à son design 3D. Pour une accroche accrue sur neige dure, il est possible d'ajouter des couteaux amovibles (couteaux S5) ou des grips. Fabrication française."},
-        { "id": 7,
-        "description": "Raquettes à bulles de savon géantes",
-        "prixUnitaire": 13.90,
-        "src": "assets/images/raquetteABulles.jpg",
-        "quantite": 648,
-        "detail": "Le mega loop est un kit pour faire des 'mega bulles géantes' ! Les bulles sont tellement grandes qu'il est possible de se mettre à l'intérieur. Il est aussi possible de faire des bulles géantes qui s'envolent. Le produit à bulles fourni a gagné de nombreux records du monde de taille de bulle. Il est très élastique et utilisé par beaucoup de professionnels."},
-        { "id": 8,
-        "description": "Raquettes scratch",
-        "prixUnitaire": 3.99,
-        "src": "assets/images/raquetteScratch.jpg",
-        "quantite": 112,
-        "detail": "Jette et attrape le poisson dans la gorge de la grenouille ! Le set de jeu comprend 2 patins velcro et une balle. Les coussinets ont une sangle réglable - idéale même pour les petites mains. Pour jouer en plein air, dans la cour, sur la plage. Un jeu attractif pour deux personnes basé sur la précision, pratiquant la coordination motrice visuelle. 3 ans et plus. Dim: 25,4 x 7,5 x 27,5 cm"}
-    ]
+  "produits": [
+    {
+      "id": 1,
+      "description": "Raquettes jungle",
+      "prixUnitaire": 5.99,
+      "src": "assets/images/raquetteJungle.jpg",
+      "quantite": 64,
+      "detail": "Idéal pour divertir un groupe d'enfants lors d'une fête, nos jeux seront une façon idéale de les occuper. De cette manière, les petits convives passeront un moment amusant, et ne risquent certainement pas de s'ennuyer. Raquette en bois avec boule en caoutchouc sur un élastique. 3 modèles d'animaux de la jungle différents (modèle suivant disponibilité). Taille: environ 23cm de long."
+    },
+    {
+      "id": 2,
+      "description": "Raquettes anti-moustique",
+      "prixUnitaire": 17.99,
+      "src": "assets/images/raquetteMoustique.jpg",
+      "quantite": 17,
+      "detail": "Raquette électrique anti-moustique, mouche, moucheron, etc. Cette tapette électrique anti insectes volants est redoutablement efficace! Vous ne serez plus gênés par des mouches ..."
+    },
+    {
+      "id": 3,
+      "description": "Raquettes de plage",
+      "prixUnitaire": 7.5,
+      "src": "assets/images/raquettePlage.jpg",
+      "quantite": 327,
+      "detail": "Envie de montrer à vos adversaires que vous n'êtes pas là pour vous amuser ? Des raquettes de plage en bois ornées des finitions en corde bleu marine emblématiques de Vilebrequin pour une prise en main parfaite devraient suffire. Avec des tortues en guise d'équipières, votre performance sera mémorable – peu importe qui gagne la partie."
+    },
+    {
+      "id": 4,
+      "description": "Raquettes paddle",
+      "prixUnitaire": 59,
+      "src": "assets/images/raquettePaddle.jpg",
+      "quantite": 25,
+      "detail": "Une raquette fun pour les juniors. A peine 300 grammes, un manche plus long pour les revers à deux mains, parfaite pour les plus jeunes !"
+    },
+    {
+      "id": 5,
+      "description": "Raquettes anti-moustique 5-en-1",
+      "prixUnitaire": 38.99,
+      "src": "assets/images/raquetteLampe.jpg",
+      "quantite": 1,
+      "detail": "Moustique rechargeable USB, chauve-souris, tueur de mouches... Conception spéciale : La lumière ultraviolette intégrée peut être utilisée comme tueur de moustiques. Lorsque le mode piégeage des moustiques est activé la nuit, cette bande lumineuse souriante spécialement conçue pour la sensibilité des moustiques stimulera l'instinct de phototaxie des moustiques et attirera les moustiques à voler vers la raquette haute tension. Il n'y a pas de rayonnement et il est sûr à utiliser. Nouveau design : La nouvelle conception à double protection du filet en plastique, la surface est protégée par du plastique, les deux couches avant et arrière sont des filets de protection de sécurité non chargés, et le milieu est la grille de travail avec l'électrode positive. Pour les humains, il s'agit d'une tension sûre à faible courant, mais pour les moustiques, il s'agit d'une tension forte. Inoffensif pour l'homme et l'environnement : En 3500 volts, l'électricité est utilisée pour tuer les parasites, et les 3 dernières couches de protection en maille de protection garantissent la sécurité des animaux domestiques et évitent les pulvérisations de bactéries nocives. Il est inoffensif pour l'homme et l'environnement.t. Batterie longue durée : Avec une batterie plomb-acide de 1200 mAh, la batterie peut être utilisée pendant 30 jours avec une seule charge. Il n'est pas nécessaire d'acheter des batteries séparées car le chargement USB est plus facile et plus pratique. Caractéristiques : Tension CC : 3500V Capacité de la batterie : 1200mAh Tension d'entrée : DC 5V Temps de charge : A peut près 2 heures Façons de tuer les moustiques : Cliquez pour tuer les moustiques Port de chargement : Interface Android Taille : 24x49cm/9.44x15.29in Taille de base : 8.8x3.8cm/3.46x1.49in Size : 49cm"
+    },
+    {
+      "id": 6,
+      "description": "Raquettes de neige",
+      "prixUnitaire": 25,
+      "src": "assets/images/raquetteNeige.jpg",
+      "quantite": 3,
+      "detail": "Les raquettes à neige TSL 325 Initial sont idéales pour les randonnées plaisir en terrain valonné. Les raquettes 325 Initial sont conçues pour les randonneurs et les randonneuses dont le poids est compris entre 50 et 120 kilos et la pointure entre 39 et 47. Chaussage rapide et marche naturelle. Les raquettes à neige TSL 325 Initial sont réputées pour permettre de chausser très rapidement grâce à leur serrage talonnière par sangle cou-de-pied à crémaillère. Ces raquettes sont également fortes de leur profil taille de guêpe qui permet d'adopter une marche naturelle. Très confortables, elles bénéficient d'une technologie permettant d'amortir les bruits et les chocs. Serrage fin et mémoire des réglages. Les raquettes 325 Initial présentent plusieurs systèmes de fixation et des réglages intuitifs : le système Boa Fit supprime les points de pression et répartit le serrage de façon uniforme. Le Lock Adjustment mémorise votre pointure et le Lateral Adjust permet d'intégrer toute largeur de chaussure. Pratique, le bloqueur fixation permet un transport et un rangement faciles.Très forte accroche grâce aux design 3D. Dans les dévers, la raquette 325 Initial offre une très forte accroche grâce à son design 3D. Pour une accroche accrue sur neige dure, il est possible d'ajouter des couteaux amovibles (couteaux S5) ou des grips. Fabrication française."
+    },
+    {
+      "id": 7,
+      "description": "Raquettes à bulles de savon géantes",
+      "prixUnitaire": 13.9,
+      "src": "assets/images/raquetteABulles.jpg",
+      "quantite": 648,
+      "detail": "Le mega loop est un kit pour faire des 'mega bulles géantes' ! Les bulles sont tellement grandes qu'il est possible de se mettre à l'intérieur. Il est aussi possible de faire des bulles géantes qui s'envolent. Le produit à bulles fourni a gagné de nombreux records du monde de taille de bulle. Il est très élastique et utilisé par beaucoup de professionnels."
+    },
+    {
+      "id": 8,
+      "description": "Raquettes scratch",
+      "prixUnitaire": 3.99,
+      "src": "assets/images/raquetteScratch.jpg",
+      "quantite": 112,
+      "detail": "Jette et attrape le poisson dans la gorge de la grenouille ! Le set de jeu comprend 2 patins velcro et une balle. Les coussinets ont une sangle réglable - idéale même pour les petites mains. Pour jouer en plein air, dans la cour, sur la plage. Un jeu attractif pour deux personnes basé sur la précision, pratiquant la coordination motrice visuelle. 3 ans et plus. Dim: 25,4 x 7,5 x 27,5 cm"
+    }
+  ],
+  "utilisateurs": [
+    {
+      "id": 1,
+      "nom": "Legrand",
+      "prenom": "Celestine",
+      "motDePasse": "celestine"
+    },
+    {
+      "id": 2,
+      "nom": "Ravo",
+      "prenom": "Pierre",
+      "motDePasse": "pierre"
+    },
+    {
+      "id": 3,
+      "nom": "Caron",
+      "prenom": "Peche",
+      "motDePasse": "peche"
+    },
+    {
+      "prenom": "Fab",
+      "nom": "Char",
+      "motDePasse": "fab",
+      "id": 4
+    },
+    {
+      "prenom": "Cec",
+      "nom": "Heu",
+      "motDePasse": "cec",
+      "id": 5
+    }
+  ]
 }

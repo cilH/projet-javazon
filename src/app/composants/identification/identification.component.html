@@ -1,24 +1,54 @@
 <h2 class="container">Identification</h2>
-<form class="container" (ngSubmit)="identifier()" #identificationForm="ngForm">
-  <div class="mb-3">
-    <label for="prenom" class="form-label">Prénom : </label>
-    <input type="text" class="form-control" id="prenom" name="prenom" minlength="3" maxlength="30" required
-      [(ngModel)]="utilisateur.prenom" #prenom="ngModel">
-    <div [hidden]="prenom.valid || prenom.pristine" class="text-danger">Le prénom est obligatoire et doit faire
-      entre 3 et 30 caractères.</div>
-  </div>
-  <div class="mb-3">
-    <label for="nom" class="form-label">Nom : </label>
-    <input type="text" class="form-control" id="nom" name="nom" minlength="3" maxlength="30" required
-      [(ngModel)]="utilisateur.nom" #nom="ngModel">
-    <div [hidden]="nom.valid || nom.pristine" class="text-danger">Le nom est obligatoire et doit faire
-      entre 3 et 30 caractères.</div>
-  </div>
-  <button [disabled]="identificationForm.invalid" class="btn btn-primary">S'identifier</button>
-</form>
+<div class="container">
+  <ng-container *ngIf="isNewUser && !isIdentified">
+    <form class="offset-4 col-4" id="inscription">
+      <fieldset>
+        <legend>Inscription</legend>
+        <div class="mb-2">
+          <label for="prenom" class="form-label">Prénom : </label>
+          <input type="text" class="form-control" id="prenom" name="prenom" minlength="3" maxlength="30" required
+            [(ngModel)]="utilisateur.prenom" #prenom="ngModel">
+          <div [hidden]="prenom.valid || prenom.pristine" class="text-danger">Le prénom est obligatoire et doit faire
+            entre 3 et 30 caractères.</div>
+        </div>
+        <div class="mb-2">
+          <label for="nom" class="form-label">Nom : </label>
+          <input type="text" class="form-control" id="nom" name="nom" minlength="3" maxlength="30" required
+            [(ngModel)]="utilisateur.nom" #nom="ngModel">
+          <div [hidden]="nom.valid || nom.pristine" class="text-danger">Le nom est obligatoire et doit faire
+            entre 3 et 30 caractères.</div>
+        </div>
+        <div class="mb-5">
+          <label for="motDePasse" class="form-label">Mot de passe : </label>
+          <input type="password" class="form-control" id="motDePasse" name="motDePasse" required
+            [(ngModel)]="utilisateur.motDePasse" #motDePasse="ngModel">
+        </div>
+        <button (click)="ajouterUtilisateur()" class="btn btn-secondary container mb-3">S'inscrire</button>
+        <button (click)="basculerSurConnexion()" class="btn btn-outline-secondary container">Déjà inscrit</button>
+      </fieldset>
+    </form>
+  </ng-container>
 
-<!-- <div class="container" *ngIf="prenom != undefined">
-  <p>Bonjour {{ utilisateur.prenom }} {{ utilisateur.nom }}</p>
-</div> -->
+  <ng-container *ngIf="!isIdentified && !isNewUser">
+    <form class="offset-4 col-4" id="identification">
+      <fieldset>
+        <legend>Connexion</legend>
+        <div class="mb-2">
+          <label for="prenom" class="form-label">Prénom : </label>
+          <input type="text" class="form-control" id="prenom" name="prenom" minlength="3" maxlength="30" required
+            [(ngModel)]="utilisateur.prenom" #prenom="ngModel">
+        </div>
+        <div class="mb-5">
+          <label for="motDePasse" class="form-label">Mot de passe : </label>
+          <input type="password" class="form-control" id="motDePasse" name="motDePasse" required
+            [(ngModel)]="utilisateur.motDePasse" #motDePasse="ngModel">
+        </div>
+        <button (click)="identifier()" class="btn btn-secondary container mb-3">S'identifier</button>
+        <button (click)="basculerSurInscription()" class="btn btn-outline-secondary container">S'inscrire</button>
+      </fieldset>
+    </form>
+  </ng-container>
 
-<div class="container mt-3">{{ message }}</div>
+  <div class="container mt-4 alert alert-success" *ngIf="isIdentified">{{ message }}</div>
+  <div class="offset-4 col-4 mt-4 alert alert-danger" *ngIf="!isIdentified && message != ''">{{ message }}</div>
+</div>

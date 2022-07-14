@@ -44,4 +44,11 @@ export class ProduitComponent implements OnInit {
       this.produit = res;
     })
   }
+
+  permuter(no: number) {
+    // var srcPetiteImg = (document.getElementById(`petiteImg+${no}`) ?? "").getAttribute('src');
+    // var srcGrandeImg = (document.getElementById('grandeImg') ?? "").getAttribute('src');
+    // document.getElementById('grandeImg').setAttribute('src', srcPetiteImg);
+    // document.getElementById(`petiteImg+${no}`).setAttribute('src', srcGrandeImg);
+  }
 }

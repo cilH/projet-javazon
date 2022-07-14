@@ -37,3 +37,23 @@ h3 {
     max-height: 200px;
     overflow: auto;
 }
+button {
+    border: none;
+    background: none;
+}
+
+#grandeImg {
+    max-width: 450px;
+    max-height: 375px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#petiteImg1, #petiteImg2 {
+    max-width: 150px;
+    max-height: 125px;
+    margin-right: 5px;
+}
+.miniatures {
+    display: flex;
+}

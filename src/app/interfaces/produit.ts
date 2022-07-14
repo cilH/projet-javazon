@@ -1,8 +1,14 @@
 export interface Produit {
     id?: number;
-    description?: string;
+    marque?: string;
+    designation?: string;
     prixUnitaire?: number;
-    src?: string;
+    src1?: string;
+    src2?: string;
+    src3?: string;
     quantite?: number;
     detail?: string;
+    categorieProduit?: string;
+    cible?: string;
+    like?: number;
 }

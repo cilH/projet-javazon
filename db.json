@@ -2,67 +2,115 @@
   "produits": [
     {
       "id": 1,
-      "description": "Raquettes jungle",
-      "prixUnitaire": 5.99,
-      "src": "assets/images/raquetteJungle.jpg",
+      "marque": "Adidas",
+      "designation": "Ultra 4dfw",
+      "prixUnitaire": 230,
+      "src1": "assets/images/adidasultra4dfwd.jpg",
+      "src2": "assets/images/adidasultra4dfwd2.jpg",
+      "src3": "assets/images/adidasultra4dfwd3.jpg",
       "quantite": 64,
-      "detail": "Idéal pour divertir un groupe d'enfants lors d'une fête, nos jeux seront une façon idéale de les occuper. De cette manière, les petits convives passeront un moment amusant, et ne risquent certainement pas de s'ennuyer. Raquette en bois avec boule en caoutchouc sur un élastique. 3 modèles d'animaux de la jungle différents (modèle suivant disponibilité). Taille: environ 23cm de long."
+      "detail": "Cloud White / Core Black / Solar Yellow. UNE CHAUSSURE DE RUNNING ASSURANT UNE FOULÉE SOUPLE, CONÇUE EN PARTIE À BASE DE PARLEY OCEAN PLASTIC. Courir, c'est aller de l'avant à chaque foulée, à chaque kilomètre, chaque jour que tu t'entraînes. Que ta foulée soit rapide ou lente, longue ou courte, cette chaussure adidas est conçue pour te guider dans la bonne direction. Le maillage oblique sur la semelle intermédiaire offre maintien et amorti pour te propulser vers l'avant à chaque pas. Le résultat ? Une foulée fluide qui ressemble plus à un glissement qu'à une série d'impacts sur le bitume. La tige adidas Primeknit épouse les contours du pied, tandis que la semelle extérieure en caoutchouc adhérent assure une accroche supérieure sur les surfaces sèches et mouillées. La tige de cette chaussure est confectionnée avec une fibre haute performance contenant 50 % minimum de Parley Ocean Plastic, une matière créée à partir de déchets plastiques recyclés qui ont été collectés sur les îles, les plages et le littoral, pour éviter la pollution des océans. Les 50 % restants sont constitués de polyester recyclé.",
+      "categorieProduit": "chaussures",
+      "cible": "femme",
+      "like": 7
     },
     {
       "id": 2,
-      "description": "Raquettes anti-moustique",
-      "prixUnitaire": 17.99,
-      "src": "assets/images/raquetteMoustique.jpg",
+      "marque": "Nike",
+      "designation": "Air Zoom Tempo",
+      "prixUnitaire": 199.99,
+      "src1": "assets/images/nikeairzoom.jpg",
+      "src2": "assets/images/nikeairzoom2.jpg",
+      "src3": "assets/images/nikeairzoom3.jpg",
       "quantite": 17,
-      "detail": "Raquette électrique anti-moustique, mouche, moucheron, etc. Cette tapette électrique anti insectes volants est redoutablement efficace! Vous ne serez plus gênés par des mouches ..."
+      "detail": "UNE CHAUSSURE RÉSISTANTE, CONÇUE POUR BATTRE DES RECORDS. Ces petits bolides passeraient l'épreuve haut la main un jour de course, mais ils peuvent aussi servir de chaussure d'entraînement au quotidien. Le maintien efficace et l'amorti souple s'associent pour vous offrir le confort qui vous fera tenir la distance sur des runs longs, et la légèreté qui vous permettra d'accélérer la cadence le moment venu. Sensation de réactivité. La mousse Nike ZoomX, intégrée à la semelle intérieure, offre un retour d'énergie exceptionnel. L'unité Zoom Air visible assure quant à elle un amorti performant qui vous fera gagner en dynamisme à chaque foulée. La technologie Nike React est composée d'une mousse légère et résistante qui garantit une foulée fluide et dynamique. Adhérence conçue pour les runners. Créé à partir des données de centaines de runners, le motif d'adhérence est placé aux endroits stratégiques pour vous offrir une adhérence optimale sur de nombreuses surfaces. Coupe dynamique. L'empeigne Flyknit translucide offre une bonne respirabilité là où votre pied a tendance à chauffer. Elle utilise des fibres solides et extensibles pour créer une sensation de légèreté tout en vous assurant un maintien optimal à chaque kilomètre. Plus d'avantages. Laçage asymétrique pour un maintien optimal et fiable. Semelle de propreté amovible semi-adhésive pour la remplacer facilement. Renforts rembourrés au talon. Boucle au talon. Semelle extérieure en caoutchouc. Couleur affichée : Volt électrique/Mousse menthe/Vert pâle/Violet d'évêque.",
+      "categorieProduit": "chaussures",
+      "cible": "homme",
+      "like": 240
     },
     {
       "id": 3,
-      "description": "Raquettes de plage",
-      "prixUnitaire": 7.5,
-      "src": "assets/images/raquettePlage.jpg",
-      "quantite": 327,
-      "detail": "Envie de montrer à vos adversaires que vous n'êtes pas là pour vous amuser ? Des raquettes de plage en bois ornées des finitions en corde bleu marine emblématiques de Vilebrequin pour une prise en main parfaite devraient suffire. Avec des tortues en guise d'équipières, votre performance sera mémorable – peu importe qui gagne la partie."
+      "marque": "Reebok",
+      "designation": "Débardeur running Speedwick",
+      "prixUnitaire": 25,
+      "src1": "assets/images/reebokdebardeur.jpg",
+      "src2": "assets/images/reebokdebardeur2.jpg",
+      "src3": "assets/images/reebokdebardeur3.jpg",
+      "quantite": 17,
+      "detail": "UN DÉBARDEUR DE RUNNING ISSU DE LA COLLECTION [REE]CYCLED DE REEBOK. Le running fait partie de ta vie. Avec ce débardeur pour homme, tu restes au sec quand le rythme s'accélère. Sa technologie Speedwick évacue la transpiration et les empiècements en mesh offrent aération et fraîcheur. Les détails réfléchissants permettent une bonne visibilité par faible luminosité. Semi Orange Flare",
+      "categorieProduit": "vêtements",
+      "cible": "homme",
+      "like": 0
     },
     {
       "id": 4,
-      "description": "Raquettes paddle",
-      "prixUnitaire": 59,
-      "src": "assets/images/raquettePaddle.jpg",
-      "quantite": 25,
-      "detail": "Une raquette fun pour les juniors. A peine 300 grammes, un manche plus long pour les revers à deux mains, parfaite pour les plus jeunes !"
+      "marque": "Garmin",
+      "designation": "Forerunner 255",
+      "prixUnitaire": 349.99,
+      "src1": "assets/images/garminforerunner.jpg",
+      "src2": "assets/images/garminforerunner2.jpg",
+      "src3": "assets/images/garminforerunner3.jpg",
+      "quantite": 17,
+      "detail": "PROGRESSEZ ET PASSEZ À LA VITESSE SUPÉRIEURE. Foulée après foulée, vous faites des progrès. Passons maintenant à l'étape suivante. Obtenez les informations d'entraînement et de récupération dont vous avez besoin pour atteindre votre meilleur temps à ce jour. Obtenez un aperçu de votre sommeil, de votre statut VFC et de votre entraînement quotidien dans un rapport matinal. Chargez moins et entraînez-vous davantage avec une autonomie pouvant aller jusqu'à 14 jours en mode montre connectée et jusqu'à 30 heures en mode GPS. Repoussez vos limites avec la fonction de triathlon intégrée et plus de 30 profils d'activité. Planifiez votre stratégie avec les suggestions d'entraînements quotidiennes, des détails sur les parcours et bien plus encore avec le widget Course. Utilisez une suite complète de métriques et d'outils d'entraînement avancés pour atteindre vos objectifs. CONÇUE POUR DE LONGUES COURSES. Obtenez une image ininterrompue de votre état de santé et de votre sommeil nocturne avec une autonomie allant jusqu'à 14 jours en mode montre connectée et jusqu'à 30 heures en mode GPS. (PRESQUE) AUSSI LÉGÈRE QU'UNE PLUME. Avec son design élégant et son poids de 49 g, vous oublierez presque que vous portez votre Forerunner® 255, même lorsque vous dormez. MATÉRIAUX RÉSISTANTS À LA TRANSPIRATION. Dotée de boutons faciles à utiliser et d'un bracelet en silicone, cette montre est prête à être portée et reportée grâce à son verre Corning® Gorilla® Glass 3 durable. Bleu",
+      "categorieProduit": "objets connectés",
+      "cible": "mixte",
+      "like": 33
     },
     {
       "id": 5,
-      "description": "Raquettes anti-moustique 5-en-1",
-      "prixUnitaire": 38.99,
-      "src": "assets/images/raquetteLampe.jpg",
-      "quantite": 1,
-      "detail": "Moustique rechargeable USB, chauve-souris, tueur de mouches... Conception spéciale : La lumière ultraviolette intégrée peut être utilisée comme tueur de moustiques. Lorsque le mode piégeage des moustiques est activé la nuit, cette bande lumineuse souriante spécialement conçue pour la sensibilité des moustiques stimulera l'instinct de phototaxie des moustiques et attirera les moustiques à voler vers la raquette haute tension. Il n'y a pas de rayonnement et il est sûr à utiliser. Nouveau design : La nouvelle conception à double protection du filet en plastique, la surface est protégée par du plastique, les deux couches avant et arrière sont des filets de protection de sécurité non chargés, et le milieu est la grille de travail avec l'électrode positive. Pour les humains, il s'agit d'une tension sûre à faible courant, mais pour les moustiques, il s'agit d'une tension forte. Inoffensif pour l'homme et l'environnement : En 3500 volts, l'électricité est utilisée pour tuer les parasites, et les 3 dernières couches de protection en maille de protection garantissent la sécurité des animaux domestiques et évitent les pulvérisations de bactéries nocives. Il est inoffensif pour l'homme et l'environnement.t. Batterie longue durée : Avec une batterie plomb-acide de 1200 mAh, la batterie peut être utilisée pendant 30 jours avec une seule charge. Il n'est pas nécessaire d'acheter des batteries séparées car le chargement USB est plus facile et plus pratique. Caractéristiques : Tension CC : 3500V Capacité de la batterie : 1200mAh Tension d'entrée : DC 5V Temps de charge : A peut près 2 heures Façons de tuer les moustiques : Cliquez pour tuer les moustiques Port de chargement : Interface Android Taille : 24x49cm/9.44x15.29in Taille de base : 8.8x3.8cm/3.46x1.49in Size : 49cm"
+      "marque": "Adidas",
+      "designation": "Chaussure de trail running Terrex Agravic Pro",
+      "prixUnitaire": 200,
+      "src1": "assets/images/adidasterrex.jpg",
+      "src2": "assets/images/adidasterrex2.jpg",
+      "src3": "assets/images/adidasterrex3.jpg",
+      "quantite": 17,
+      "detail": "Core Black / Cloud White / Turbo. UNE CHAUSSURE DE TRAIL RUNNING TECHNIQUE, CONÇUE EN PARTIE AVEC PARLEY OCEAN PLASTIC. Plus le terrain est rocailleux et accidenté, plus tu as besoin de cette chaussure de trail running adidas. Elle offre une protection à 360 degrés contre les éraflures et les débris grâce à sa plaque de protection sur toute la longueur de la semelle intermédiaire et son col montant résistant à l'abrasion. Repousse tes limites en toute liberté grâce à l'amorti LIGHSTRIKE qui absorbe les impacts sur les runs longue distance. Cette chaussure possède une semelle extérieure en caoutchouc Continental™ pour une accroche exceptionnelle. Chausson intégré. Système de fermeture micro-ajustable. Tige textile résistante à l'abrasion. Design confortable. Plaque de protection au niveau de la semelle intermédiaire. Amorti Lightstrike. Semelle extérieure en caoutchouc Continental™. La tige contient au moins 50 % de Parley Ocean Plastic et 50 % de polyester recyclé.",
+      "categorieProduit": "chaussures",
+      "cible": "homme",
+      "like": 27
     },
     {
       "id": 6,
-      "description": "Raquettes de neige",
-      "prixUnitaire": 25,
-      "src": "assets/images/raquetteNeige.jpg",
-      "quantite": 3,
-      "detail": "Les raquettes à neige TSL 325 Initial sont idéales pour les randonnées plaisir en terrain valonné. Les raquettes 325 Initial sont conçues pour les randonneurs et les randonneuses dont le poids est compris entre 50 et 120 kilos et la pointure entre 39 et 47. Chaussage rapide et marche naturelle. Les raquettes à neige TSL 325 Initial sont réputées pour permettre de chausser très rapidement grâce à leur serrage talonnière par sangle cou-de-pied à crémaillère. Ces raquettes sont également fortes de leur profil taille de guêpe qui permet d'adopter une marche naturelle. Très confortables, elles bénéficient d'une technologie permettant d'amortir les bruits et les chocs. Serrage fin et mémoire des réglages. Les raquettes 325 Initial présentent plusieurs systèmes de fixation et des réglages intuitifs : le système Boa Fit supprime les points de pression et répartit le serrage de façon uniforme. Le Lock Adjustment mémorise votre pointure et le Lateral Adjust permet d'intégrer toute largeur de chaussure. Pratique, le bloqueur fixation permet un transport et un rangement faciles.Très forte accroche grâce aux design 3D. Dans les dévers, la raquette 325 Initial offre une très forte accroche grâce à son design 3D. Pour une accroche accrue sur neige dure, il est possible d'ajouter des couteaux amovibles (couteaux S5) ou des grips. Fabrication française."
+      "marque": "Adidas by Stella McCartney",
+      "designation": "Veste en toile Truepace",
+      "prixUnitaire": 160,
+      "src1": "assets/images/vestestella.jpg",
+      "src2": "assets/images/vestestella2.jpg",
+      "src3": "assets/images/vestestella3.jpg",
+      "quantite": 17,
+      "detail": "UN COUPE-VENT LÉGER ET REPLIABLE AU STYLE FÉMININ. Enchaîne les kilomètres tout en élégance malgré les rafales avec ce coupe-vent adidas by Stella McCartney. Entièrement confectionnée en polyester recyclé, cette veste légère est équipée de la technologie WIND.RDY pour te protéger du mauvais temps, sans t'alourdir. L'insert en mesh et l'empiècement ouvert au dos de cette veste ajoutent des détails stylés et permettent à l'air de circuler. Si le soleil finit par apparaître, tu peux la replier dans la poche arrière pour la transporter facilement. Ce coupe-vent est doté d'éléments réfléchissants pour t'assurer une meilleure visibilité lorsque tu cours avant ta journée de travail. Porte-le avec le pantalon de running TruePace pour rester au sec de la tête aux pieds. Coupe ample. Zip sur toute la longueur. Col montant. Tissu façonné 100 % polyester recyclé. Design léger. Poches zippées. Panneau arrière en mesh aéré. Base réglable avec un cordon élastique. Se replie dans une poche. Couleur du produit : Shock Yellow",
+      "categorieProduit": "vêtements",
+      "cible": "femme",
+      "like": 7
     },
     {
       "id": 7,
-      "description": "Raquettes à bulles de savon géantes",
-      "prixUnitaire": 13.9,
-      "src": "assets/images/raquetteABulles.jpg",
-      "quantite": 648,
-      "detail": "Le mega loop est un kit pour faire des 'mega bulles géantes' ! Les bulles sont tellement grandes qu'il est possible de se mettre à l'intérieur. Il est aussi possible de faire des bulles géantes qui s'envolent. Le produit à bulles fourni a gagné de nombreux records du monde de taille de bulle. Il est très élastique et utilisé par beaucoup de professionnels."
+      "marque": "Reebok",
+      "designation": "Floatride Energy X",
+      "prixUnitaire": 170,
+      "src1": "assets/images/reebokfloatride.jpg",
+      "src2": "assets/images/reebokfloatride2.jpg",
+      "src3": "assets/images/reebokfloatride3.jpg",
+      "quantite": 17,
+      "detail": "UNE CHAUSSURE DE RUNNING PERFORMANTE ISSUE DE LA COLLECTION [REE]CYCLED DE REEBOK. Inspirée des athlètes du Reebok Boston Track Club, cette chaussure de running est conçue pour les marathons et les entraînements longue distance. La tige Flexweave® est résistante, respirante et offre un soutien ciblé. Le laçage asymétrique assure un chaussant ajusté. La mousse légère Floatride Energy présente une forme en rouleau pour une foulée plus fluide. Une plaque de carbone à l'avant-pied améliore la propulsion et l'efficacité. Orange Flare / Infused Lilac / Acid Yellow. Conçue À Partir De Matières Recyclées. Elle est fabriquée avec au moins 30 % de matériaux recyclés ou transformés. Tissu Stretch Et Maintien. La tige textile Flexweave® extensible et résistante apporte un maintien ciblé aux zones clés. Plus D'énergie. La mousse Floatride Energy procure un amorti léger et réactif.",
+      "categorieProduit": "chaussures",
+      "cible": "femme",
+      "like": 24
     },
     {
       "id": 8,
-      "description": "Raquettes scratch",
-      "prixUnitaire": 3.99,
-      "src": "assets/images/raquetteScratch.jpg",
-      "quantite": 112,
-      "detail": "Jette et attrape le poisson dans la gorge de la grenouille ! Le set de jeu comprend 2 patins velcro et une balle. Les coussinets ont une sangle réglable - idéale même pour les petites mains. Pour jouer en plein air, dans la cour, sur la plage. Un jeu attractif pour deux personnes basé sur la précision, pratiquant la coordination motrice visuelle. 3 ans et plus. Dim: 25,4 x 7,5 x 27,5 cm"
+      "marque": "Apple",
+      "designation": "Apple Watch Nike Series 7 (GPS) avec Bracelet Sport Nike",
+      "prixUnitaire": 429,
+      "src1": "assets/images/applewatch.jpg",
+      "src2": "assets/images/applewatch2.jpg",
+      "src3": "assets/images/applewatch3.jpg",
+      "quantite": 7,
+      "detail": "Conçu pour bouger. Avec l'Apple Watch Nike Series 7 et son application Nike Run Club intégrée, vous pouvez suivre vos entraînements et écouter des runs guidés. Écoutez votre musique préférée à partir de votre montre pour booster votre motivation. Activez le mode crépuscule Nike pour une meilleure visibilité. Faites votre choix parmi des bracelets et cadrans Nike exclusifs. Avantages: L'écran Retina toujours activé est 20 % plus grand que celui de la Series 6, pour plus de visibilité et une grande facilité d'utilisation. Il est 70 % plus lumineux en intérieur lorsque vous avez le poignet baissé. L'écran en cristal est le plus résistant aux fissures de toutes les Apple Watch, avec une barrière anti-poussière IP6X et une conception résistante à l'eau. Mesurez votre taux d'oxygène dans le sang grâce à un capteur et à une application révolutionnaires. Passez un électro­cardio­gramme à tout moment. Recevez des notifications si vous présentez des signes d'arythmie, ou si votre fréquence cardiaque est anormalement faible ou élevée. Restez zen avec l'application Pleine conscience et suivez l'évolution de vos rythmes de sommeil avec l'application Sommeil. Découvrez les nouveaux entraînements de Tai Chi et de Pilates, en plus des incontournables tels que le running, le yoga, la natation et la danse. Suivez vos activités quotidiennes sur Apple Watch et dans l'application Fitness sur iPhone. En avant la musique. Et les podcasts. Et les livres audio. Faites vos achats instantanément et en toute sécurité grâce à Apple Pay à votre poignet. Autonomie tout au long de la journée et chargement accéléré. watchOS 8 présente de nouveaux types d’entraînement, l’app Pleine conscience, les nouveaux cadrans Portraits et des améliorations apportées à Messages",
+      "categorieProduit": "objets connectés",
+      "cible": "mixte",
+      "like": 2
     }
   ],
   "utilisateurs": [
@@ -70,65 +118,25 @@
       "id": 1,
       "nom": "Legrand",
       "prenom": "Celestine",
-      "motDePasse": "celestine"
+      "motDePasse": "celestine",
+      "adresse": "15 rue Ernest, 69000 Lyon",
+      "email": "celestine.l69@gmail.com"
     },
     {
       "id": 2,
       "nom": "Ravo",
       "prenom": "Pierre",
-      "motDePasse": "pierre"
+      "motDePasse": "pierre",
+      "adresse": "13 avenue du Puit neuf, 75012 Paris",
+      "email": "pierre.r75@gmail.com"
     },
     {
       "id": 3,
       "nom": "Caron",
       "prenom": "Peche",
-      "motDePasse": "peche"
-    },
-    {
-      "prenom": "Fab",
-      "nom": "Char",
-      "motDePasse": "fab",
-      "id": 4
-    },
-    {
-      "prenom": "Cec",
-      "nom": "Heu",
-      "motDePasse": "cec",
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "id": 10
-    },
-    {
-      "prenom": "cc",
-      "nom": " ss",
-      "id": 11
-    },
-    {
-      "prenom": "fzfe",
-      "nom": "fzef",
-      "motDePasse": "dfef",
-      "id": 12
-    },
-    {
-      "prenom": "kuglugg",
-      "nom": ":jkg:kjg;k",
-      "email": "kkbl:ljg:l",
-      "adresse": "sfzfzefzegz",
-      "motDePasse": "zgergaer\"r",
-      "id": 13
+      "motDePasse": "peche",
+      "adresse": "12 chemin des Cerises, 13012 Marseille",
+      "email": "peche.c13@gmail.com"
     }
   ]
 }

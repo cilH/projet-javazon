@@ -11,6 +11,7 @@ import { ProduitComponent } from './composants/produit/produit.component';
 import { ErreurComponent } from './composants/erreur/erreur.component';
 import { FormsModule } from '@angular/forms';
 import { PanierComponent } from './composants/panier/panier.component';
+import { CompteComponent } from './composants/compte/compte.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PanierComponent } from './composants/panier/panier.component';
     IdentificationComponent,
     ProduitComponent,
     ErreurComponent,
-    PanierComponent
+    PanierComponent,
+    CompteComponent
   ],
   imports: [
     BrowserModule,

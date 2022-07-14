@@ -3,4 +3,6 @@ export interface Utilisateur {
     nom?: string;
     prenom?: string;
     motDePasse?: string;
+    adresse?: string;
+    email?: string;
 }

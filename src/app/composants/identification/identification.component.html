@@ -1,30 +1,42 @@
-<h2 class="container">Identification</h2>
 <div class="container">
   <ng-container *ngIf="isNewUser && !isIdentified">
-    <form class="offset-4 col-4" id="inscription">
+    <form class="offset-2 col-8" id="inscription" (ngSubmit)="ajouterUtilisateur()" #formInscription="ngForm">
       <fieldset>
         <legend>Inscription</legend>
-        <div class="mb-2">
+        <div class="row">
+        <div class="col-3 mb-2">
           <label for="prenom" class="form-label">Prénom : </label>
           <input type="text" class="form-control" id="prenom" name="prenom" minlength="3" maxlength="30" required
             [(ngModel)]="utilisateur.prenom" #prenom="ngModel">
           <div [hidden]="prenom.valid || prenom.pristine" class="text-danger">Le prénom est obligatoire et doit faire
             entre 3 et 30 caractères.</div>
         </div>
-        <div class="mb-2">
+        <div class="col-3 mb-2">
           <label for="nom" class="form-label">Nom : </label>
           <input type="text" class="form-control" id="nom" name="nom" minlength="3" maxlength="30" required
             [(ngModel)]="utilisateur.nom" #nom="ngModel">
           <div [hidden]="nom.valid || nom.pristine" class="text-danger">Le nom est obligatoire et doit faire
             entre 3 et 30 caractères.</div>
         </div>
-        <div class="mb-5">
+        <div class="offset-1 col-5 mb-2">
+          <label for="email" class="form-label">Email : </label>
+          <input type="email" placeholder="prenom.nom@exemple.com" class="form-control" id="email" name="email" required
+            [(ngModel)]="utilisateur.email" #email="ngModel">
+        </div>
+      </div>
+        <div class="mb-2">
+          <label for="adresse" class="form-label">Adresse : </label>
+          <input type="text" class="form-control" placeholder="15 rue du Paradis, 06000 Nice" id="adresse" name="adresse" required
+            [(ngModel)]="utilisateur.adresse" #adresse="ngModel">
+        </div>
+        <div class="col-6 mb-5">
           <label for="motDePasse" class="form-label">Mot de passe : </label>
           <input type="password" class="form-control" id="motDePasse" name="motDePasse" required
             [(ngModel)]="utilisateur.motDePasse" #motDePasse="ngModel">
         </div>
-        <button (click)="ajouterUtilisateur()" class="btn btn-secondary container mb-3">S'inscrire</button>
-        <button (click)="basculerSurConnexion()" class="btn btn-outline-secondary container">Déjà inscrit</button>
+        <button [disabled]="formInscription.invalid" class="btn btn-light text-dark container mb-3">S'inscrire</button>
+        <button (click)="basculerSurConnexion()" style="color: white;" class="btn btn-outline-light text-dark container">Déjà
+          inscrit</button>
       </fieldset>
     </form>
   </ng-container>
@@ -49,6 +61,5 @@
     </form>
   </ng-container>
 
-  <div class="container mt-4 alert alert-success" *ngIf="isIdentified">{{ message }}</div>
   <div class="offset-4 col-4 mt-4 alert alert-danger" *ngIf="!isIdentified && message != ''">{{ message }}</div>
 </div>

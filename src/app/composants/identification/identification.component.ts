@@ -11,6 +11,7 @@ import { UtilisateurService } from 'src/app/services/utilisateur.service';
 export class IdentificationComponent implements OnInit {
   utilisateur: Utilisateur = {};
   utilisateurs: Utilisateur[] = [];
+  id?: number;
   isIdentified: boolean = false;
   isNewUser: boolean = false;
   message: string = "";
@@ -36,7 +37,6 @@ export class IdentificationComponent implements OnInit {
       this.message = `Bienvenue ${this.utilisateur.prenom} !`;
       this.isIdentified = true;
     })
-
   }
 
   identifier() {
@@ -44,9 +44,10 @@ export class IdentificationComponent implements OnInit {
       this.utilisateurs = res;
       this.message = "";
       for (const elt of this.utilisateurs) {
-        if (elt.prenom == this.utilisateur.prenom && elt.motDePasse == this.utilisateur.motDePasse) {
+        if (this.utilisateur.prenom != undefined && this.utilisateur.motDePasse != undefined && elt.prenom == this.utilisateur.prenom && elt.motDePasse == this.utilisateur.motDePasse) {
           this.isIdentified = true;
-          this.message = `Bienvenue ${this.utilisateur.prenom} !`;
+          this.id = this.utilisateur.id;
+          this.router.navigateByUrl(`/compte/${this.id}`);
         }
         else {
           this.message = "Echec identification";

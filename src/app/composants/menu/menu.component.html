@@ -1,35 +1,42 @@
-<ng-container class="petitMenu" *ngIf="petitEcran == true, else grandEcran">
-    <div class="container">
-        <div class="offcanvas offcanvas-start" id="demo">
-            <div class="offcanvas-header">
-                <h1 class="offcanvas-title">Menu</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+<div class="menu container">
+    <ng-container class="petitMenu" *ngIf="petitEcran == true, else grandEcran">
+        <div class="container">
+            <div class="offcanvas offcanvas-start" id="demo">
+                <div class="offcanvas-header">
+                    <h1 class="offcanvas-title">Menu</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/compte/:id"><i
+                                    class="fas fa-user"></i>Compte</a></li>
+                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/produit"><i
+                                    class="fas fa-store"></i>Produit</a></li>
+                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/panier"><i
+                                    class="fas fa-shopping-bag"></i>Panier</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="offcanvas-body">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/compte/:id"><i
-                                class="fas fa-user"></i>Compte</a></li>
-                    <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/produit"><i class="fas fa-store"></i>Produit</a></li>
-                    <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/panier"><i
-                                class="fas fa-shopping-bag"></i>Panier</a></li>
-                </ul>
-            </div>
-        </div>
-      
-        <div class="container-fluid mt-3" id="raccourci">
-            <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </div>
-</ng-container>
 
-<ng-template class="container" #grandEcran>
-    <ul class="container nav nav-tabs">
-        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/"><i
-                    class="fas fa-user"></i>Compte</a></li>
-        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/produit"><i class="fas fa-store"></i>Produit</a></li>
-        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/panier"><i
-                    class="fas fa-shopping-bag"></i>Panier</a></li>
-    </ul>
-</ng-template>
+            <div class="container-fluid mt-3" id="raccourci">
+                <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </ng-container>
+
+
+    <ng-template class="container" #grandEcran>
+        <nav>
+            <ul class="container nav nav-tabs">
+                <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/" style="color: bisque"><i
+                            class="fas fa-user"></i>Compte</a></li>
+                <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/produit"
+                        style="color: bisque"><i class="fas fa-store"></i>Produit</a></li>
+                <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" routerLink="/panier"
+                        style="color: bisque"><i class="fas fa-shopping-bag"></i>Panier</a></li>
+            </ul>
+        </nav>
+    </ng-template>
+</div>

@@ -1,7 +1,7 @@
 ul li {
     list-style-type: none;
     display:inline-block;
-    margin-right: 20px;
+    margin-right: 5px;
 }
 a {
     text-decoration: none;
@@ -14,7 +14,7 @@ ul {
     margin-bottom: 15px;
 }
 .fas {
-    margin-right: 15px;
+    margin-right: 8px;
 }
 
 .offcanvas-body .nav {
@@ -24,4 +24,10 @@ ul {
 #raccourci {
     display: flex;
     justify-content: flex-end;
+}
+nav {
+    width: 86%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }

@@ -44,7 +44,7 @@ export class IdentificationComponent implements OnInit {
       this.utilisateurs = res;
       this.message = "";
       for (const elt of this.utilisateurs) {
-        if (this.utilisateur.prenom != undefined && this.utilisateur.motDePasse != undefined && elt.prenom == this.utilisateur.prenom && elt.motDePasse == this.utilisateur.motDePasse) {
+        if (this.utilisateur.email != undefined && this.utilisateur.motDePasse != undefined && elt.email == this.utilisateur.email && elt.motDePasse == this.utilisateur.motDePasse) {
           this.isIdentified = true;
           this.id = this.utilisateur.id;
           this.router.navigateByUrl(`/compte/${this.id}`);

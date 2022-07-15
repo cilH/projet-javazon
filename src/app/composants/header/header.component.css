@@ -1,7 +1,10 @@
-h1 {
+header {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     height: 100px;
-    background-color: cadetblue;
+}
+img {
+    margin-left: 60px;
+    margin-right: 10px;
+    height: 90px;
 }

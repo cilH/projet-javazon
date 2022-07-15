@@ -1,11 +1,41 @@
-#inscription, #identification {
+#inscription,
+#identification {
     border: solid 1px;
-    padding: 35px;
+    color: black;
 }
+
 legend {
     text-align: center;
 }
+
 #inscription {
-    background-color: rgb(108, 117, 125);
-    color: white;
+    position: absolute;
+    bottom: 35px;
+    right: 250px;
+    padding: 15px;
 }
+
+.accueil1, .accueil2 {
+    position: relative;
+}
+
+#identification {
+    position: absolute;
+    bottom: 70px;
+    left: 110px;
+    padding: 35px;
+    /* font-weight: bold; */
+}
+
+.photo1, .photo2 {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.photo2>img {
+    max-height: 550px;
+}
+

@@ -12,21 +12,29 @@ export class ProduitComponent implements OnInit {
   produits: Produit[] = [];
   produit: Produit = {};
   id: number = 0;
+  recherche: string = "";
+  
   constructor(
     private ps: ProduitService,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(res => {
+    // this.route.paramMap.subscribe(res => {
+    this.route.queryParamMap.subscribe(res => {
       this.id = Number(res.get('id') ?? 0);
+      this.recherche = res.get('recherche') ?? "";
       if (this.id != 0) {
         this.recupererProduit();
+      }
+      else if(this.recherche != "") {
+        this.produits = this.ps.resultatsRecherche;
       }
       else {
         this.recupererProduits();
       }
     })
+    this.produits = [];
   }
 
   recupererProduits() {
@@ -42,9 +50,6 @@ export class ProduitComponent implements OnInit {
   }
 
   permuter(no: number) {
-    // var srcPetiteImg = (document.getElementById(`petiteImg+${no}`) ?? "").getAttribute('src');
-    // var srcGrandeImg = (document.getElementById('grandeImg') ?? "").getAttribute('src');
-    // document.getElementById('grandeImg').setAttribute('src', srcPetiteImg);
-    // document.getElementById(`petiteImg+${no}`).setAttribute('src', srcGrandeImg);
+   
   }
 }

@@ -7,28 +7,8 @@
 legend {
     text-align: center;
 }
-
-section {
+.accueil1, .accueil2 {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-
-#identification {
-    width: 350px;
-    flex: 5;
-}
-
-#inscription {
-    width: 550px;
-}
-
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 500px;
-}
-.photo {
-    flex: 3;
+    align-items: center;
+    justify-content: center;
 }

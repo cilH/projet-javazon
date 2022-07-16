@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'compte/:id', component: CompteComponent },
   { path: 'produit', component: ProduitComponent },
   { path: 'produit/:id', component: ProduitComponent },
+  { path: 'produit/:recherche', component: ProduitComponent },
   { path: 'panier', component: PanierComponent },
   { path: 'erreur', component: ErreurComponent },
   { path: '**', redirectTo: 'erreur' }

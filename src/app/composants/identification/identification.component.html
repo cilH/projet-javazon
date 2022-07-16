@@ -1,75 +1,81 @@
 <section class="container">
-
-  <div class="photo"><img src="assets/images/coureuse.jpg" alt="coureuse"></div>
-
-  <div class="accueil1">
-    <ng-container *ngIf="!isIdentified && !isNewUser">
-      <form id="identification" #formIdentification="ngForm" class="was-validated">
-        <fieldset>
-          <legend>Connexion</legend>
-          <div class="mb-2">
-            <label for="email" class="form-label">Email : </label>
-            <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="utilisateur.email"
-              #email="ngModel">
-          </div>
-          <div class="mb-5">
-            <label for="motDePasse" class="form-label">Mot de passe : </label>
-            <input type="password" class="form-control" id="motDePasse" name="motDePasse" minlength="8" maxlength="30"
-              required [(ngModel)]="utilisateur.motDePasse" #motDePasse="ngModel">
-          </div>
-          <button [disabled]="formIdentification.invalid" (click)="identifier()"
-            class="btn btn-secondary container mb-3">S'identifier</button>
-          <button (click)="basculerSurInscription()"
-            class="btn btn-light btn-outline-secondary container">S'inscrire</button>
-        </fieldset>
-      </form>
-    </ng-container>
-  </div>
-
-  <div class="accueil2">
-    <ng-container *ngIf="isNewUser && !isIdentified">
-      <form class="was-validated col-4" id="inscription" (ngSubmit)="ajouterUtilisateur()" #formInscription="ngForm">
-        <fieldset>
-          <legend>Inscription</legend>
-          <div class="row">
-            <div class="col-6 mb-1">
-              <label for="prenom" class="form-label">Prénom : </label>
-              <input type="text" class="form-control" id="prenom" name="prenom" minlength="3" maxlength="30" required
-                [(ngModel)]="utilisateur.prenom" #prenom="ngModel">
-            </div>
-            <div class="col-6 mb-1">
-              <label for="nom" class="form-label">Nom : </label>
-              <input type="text" class="form-control" id="nom" name="nom" minlength="3" maxlength="30" required
-                [(ngModel)]="utilisateur.nom" #nom="ngModel">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6 mb-1">
+  <ng-container *ngIf="!isIdentified && !isNewUser">
+    <div class="row">
+      <div class="photo col-7"><img class="img-fluid" src="assets/images/coureuse.jpg" alt="coureuse"></div>
+      <div class="accueil1 col-5">
+        <form id="identification" #formIdentification="ngForm" class="was-validated">
+          <fieldset>
+            <legend>Connexion</legend>
+            <div class="mb-2">
               <label for="email" class="form-label">Email : </label>
-              <input type="email" placeholder="pseudo@exemple.com" class="form-control" id="email" name="email"
-                required [(ngModel)]="utilisateur.email" #email="ngModel">
+              <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="utilisateur.email"
+                #email="ngModel">
             </div>
-            <div class="col-6 mb-1">
+            <div class="mb-5">
               <label for="motDePasse" class="form-label">Mot de passe : </label>
               <input type="password" class="form-control" id="motDePasse" name="motDePasse" minlength="8" maxlength="30"
-                required placeholder="8 à 30 caractères."
-                [(ngModel)]="utilisateur.motDePasse" #motDePasse="ngModel">
+                required [(ngModel)]="utilisateur.motDePasse" #motDePasse="ngModel">
             </div>
-          </div>
-          <div class="mb-3">
-            <label for="adresse" class="form-label">Adresse : </label>
-            <input type="text" class="form-control" placeholder="15 rue du Paradis, 06000 Nice" id="adresse"
-              name="adresse" required [(ngModel)]="utilisateur.adresse" #adresse="ngModel">
-          </div>
+            <button [disabled]="formIdentification.invalid" (click)="identifier()"
+              class="btn btn-secondary container mb-3">S'identifier</button>
+            <button (click)="basculerSurInscription()"
+              class="btn btn-light btn-outline-secondary container">S'inscrire</button>
+          </fieldset>
+          <div class="mt-4 alert alert-danger" *ngIf="!isIdentified && message != ''">{{ message }}</div>
+        </form>
+      </div>
+    </div>
+  </ng-container>
 
-          <button [disabled]="formInscription.invalid" class="btn btn-secondary container mb-3">S'inscrire</button>
-          <button (click)="basculerSurConnexion()" style="color: white;"
-            class="btn btn-light btn-outline-secondary text-dark container">Déjà
-            inscrit</button>
-        </fieldset>
-      </form>
-    </ng-container>
-  </div>
+  <ng-container *ngIf="isNewUser && !isIdentified">
+    <div class="row">
+      <div class="photo col-7"><img class="img-fluid" src="assets/images/coureuse.jpg" alt="coureuse"></div>
+      <div class="accueil2 col-5">
+        <form class="was-validated" id="inscription" (ngSubmit)="ajouterUtilisateur()" #formInscription="ngForm">
+          <fieldset>
+            <legend>Inscription</legend>
+            <div class="row">
+              <div class="col-6 mb-1">
+                <label for="prenom" class="form-label">Prénom : </label>
+                <input type="text" class="form-control" id="prenom" name="prenom" minlength="3" maxlength="30" required
+                  [(ngModel)]="utilisateur.prenom" #prenom="ngModel">
+              </div>
+              <div class="col-6 mb-1">
+                <label for="nom" class="form-label">Nom : </label>
+                <input type="text" class="form-control" id="nom" name="nom" minlength="3" maxlength="30" required
+                  [(ngModel)]="utilisateur.nom" #nom="ngModel">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 mb-1">
+                <label for="email" class="form-label">Email : </label>
+                <input type="email" placeholder="pseudo@exemple.com" class="form-control" id="email" name="email"
+                  required [(ngModel)]="utilisateur.email" #email="ngModel">
+              </div>
+              <div class="col-6 mb-1">
+                <label for="motDePasse" class="form-label">Mot de passe : </label>
+                <input type="password" class="form-control" id="motDePasse" name="motDePasse" minlength="8"
+                  maxlength="30" required placeholder="8 à 30 caractères." [(ngModel)]="utilisateur.motDePasse"
+                  #motDePasse="ngModel">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="adresse" class="form-label">Adresse : </label>
+              <input type="text" class="form-control" placeholder="15 rue du Paradis, 06000 Nice" id="adresse"
+                name="adresse" required [(ngModel)]="utilisateur.adresse" #adresse="ngModel">
+            </div>
 
-  <div class="offset-4 col-4 mt-4 alert alert-danger" *ngIf="!isIdentified && message != ''">{{ message }}</div>
+            <button [disabled]="formInscription.invalid" class="btn btn-secondary container mb-3">S'inscrire</button>
+            <button (click)="basculerSurConnexion()" style="color: white;"
+              class="btn btn-light btn-outline-secondary text-dark container">Déjà
+              inscrit</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+  </ng-container>
+
+
+
 </section>

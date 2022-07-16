@@ -1,26 +1,30 @@
 <nav class="navbar navbar-expand-sm container mb-3">
     <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <button class="navbar-toggler btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" routerLink="/"><i class="fas fa-user"></i>Compte</a>
+                    <a class="nav-link" data-bs-toggle="tab" routerLink="/"><i class="fas fa-user"></i></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="tab" routerLink="/produit"><i
-                            class="fas fa-store"></i>Produit</a>
+                            class="fas fa-store"></i></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="tab" routerLink="/panier"><i
-                            class="fas fa-shopping-bag"></i>Panier</a>
+                            class="fas fa-shopping-bag"></i></a>
                 </li>
             </ul>
             <form class="d-flex">
-                <input id="recherche" class="form-control me-2" type="text" placeholder="Taper ici votre recherche">
+                <input id="recherche" name="recherche" class="form-control me-2" type="text" placeholder="Taper ici votre recherche">
                 <button (click)="rechercherProduits()" class="btn btn-primary" type="button">Rechercher</button>
             </form>
+            <!-- <form class="d-flex" (ngSubmit)="rechercherProduits()" #formRecherche="ngForm">
+                <input id="recherche" name="recherche" class="form-control me-2" type="text" placeholder="Taper ici votre recherche" #recherche="ngModel" [(ngModel)]="recherche">
+                <button class="btn btn-primary" type="button">Rechercher</button>
+            </form> -->
         </div>
     </div>
 </nav>

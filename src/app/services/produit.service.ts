@@ -7,6 +7,9 @@ import { Produit } from '../interfaces/produit';
 })
 export class ProduitService {
   private url: string = "http://localhost:5555/produits";
+  recherche: string = "";
+  resultatsRecherche: Produit[] = [];
+  
   constructor(private http: HttpClient) { }
 
   getAllProducts() {

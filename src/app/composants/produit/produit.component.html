@@ -1,19 +1,11 @@
 <h2 class="container">Produit</h2>
 <section>
-    <div class="container mt-5 mb-2 input-group">
-        <input id="recherche" type="text" placeholder="Taper ici votre recherche" class="form-control">
-        <button (click)="rechercherProduits()" class="btn btn-secondary">Rechercher</button>
-    </div>
-    <div class="container miseEnPage mt-4" [hidden]="id !=0">
-        <button><i style="color: cadetblue" class="fas fa-th-large fa-2xl"></i></button>
-        <button><i style="color: cadetblue" class="fas fa-th-list fa-2xl"></i></button>
-    </div>
-
     <div class="container">
         <ul class="row">
             <ng-container *ngIf="id == 0, else details">
                 <li class="col-xl-6 col-sm-12 produit p-4 mt-1" *ngFor="let elt of produits">
-                    <div class="col-6"><a href="/produit/{{ elt.id }}"><img src="{{ elt.src1 }}" alt="{{ elt.designation }}"></a></div>
+                    <div class="col-6"><a href="/produit/{{ elt.id }}"><img src="{{ elt.src1 }}"
+                                alt="{{ elt.designation }}"></a></div>
                     <div class="detailsProduit col-6">
                         <ul>
                             <li class="mb-2">
@@ -33,8 +25,10 @@
                 <div class="col-4 mt-4">
                     <div class="row"><img id="grandeImg" src="{{ produit.src1 }}" alt="{{ produit.designation }}"></div>
                     <div class="miniatures mt-4">
-                        <div><button onclick="permuter(1)"><img id="petiteImg1" src="{{ produit.src2 }}" alt="{{ produit.designation }}"></button></div>
-                        <div><button onclick="permuter(2)"><img id="petiteImg2" src="{{ produit.src3 }}" alt="{{ produit.designation }}"></button></div>
+                        <div><button onclick="permuter(1)"><img id="petiteImg1" src="{{ produit.src2 }}"
+                                    alt="{{ produit.designation }}"></button></div>
+                        <div><button onclick="permuter(2)"><img id="petiteImg2" src="{{ produit.src3 }}"
+                                    alt="{{ produit.designation }}"></button></div>
                     </div>
                 </div>
                 <div class="detailsProduit col-8 mt-4">

@@ -29,10 +29,6 @@ export class ProduitComponent implements OnInit {
     })
   }
 
-  rechercherProduits() {
-
-  }
-
   recupererProduits() {
     this.ps.getAllProducts().subscribe(res => {
       this.produits = res;

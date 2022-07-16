@@ -12,6 +12,7 @@ import { ErreurComponent } from './composants/erreur/erreur.component';
 import { FormsModule } from '@angular/forms';
 import { PanierComponent } from './composants/panier/panier.component';
 import { CompteComponent } from './composants/compte/compte.component';
+import { FooterComponent } from './composants/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CompteComponent } from './composants/compte/compte.component';
     ProduitComponent,
     ErreurComponent,
     PanierComponent,
-    CompteComponent
+    CompteComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

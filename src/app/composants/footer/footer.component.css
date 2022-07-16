@@ -1,0 +1,18 @@
+footer, ul {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: white;
+
+}
+
+footer {
+    justify-content: space-evenly;
+    background-color: rgb(11, 11, 80);
+    color: white;
+    height: 50px;
+}

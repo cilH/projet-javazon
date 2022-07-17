@@ -19,3 +19,7 @@ ul {
 .navbar {
     background-color: rgb(11, 11, 80);
 }
+
+button {
+    background: none;
+}

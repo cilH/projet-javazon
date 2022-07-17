@@ -11,6 +11,8 @@ import { UtilisateurService } from 'src/app/services/utilisateur.service';
 export class IdentificationComponent implements OnInit {
   utilisateur: Utilisateur = {};
   utilisateurs: Utilisateur[] = [];
+  email: string = "";
+  motDePasse: string = "";
   id?: number;
   isIdentified: boolean = false;
   isNewUser: boolean = false;
@@ -39,20 +41,22 @@ export class IdentificationComponent implements OnInit {
     })
   }
 
-  identifier() {
+  seConnecter() {
     this.us.getAllUsers().subscribe(res => {
       this.utilisateurs = res;
       this.message = "";
-      for (const elt of this.utilisateurs) {
-        if (this.utilisateur.email != undefined && this.utilisateur.motDePasse != undefined && elt.email == this.utilisateur.email && elt.motDePasse == this.utilisateur.motDePasse) {
+      this.us.checkUser(this.email, this.motDePasse).subscribe(res => {
+        if (res.length > 0) {
+          this.utilisateur = res[0];
           this.isIdentified = true;
-          this.id = this.utilisateur.id;
-          this.router.navigateByUrl(`/compte/${this.id}`);
+          const userString = JSON.stringify(res[0]);
+          localStorage.setItem('user', userString)
+          this.router.navigateByUrl(`/compte/${this.utilisateur.id}`);
         }
         else {
           this.message = "Echec identification";
         }
-      }
+      })
     })
   }
 }

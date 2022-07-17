@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Produit } from 'src/app/interfaces/produit';
+import { Utilisateur } from 'src/app/interfaces/utilisateur';
 import { ProduitService } from 'src/app/services/produit.service';
+import { UtilisateurService } from 'src/app/services/utilisateur.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,13 +11,14 @@ import { ProduitService } from 'src/app/services/produit.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  id: number | undefined;
   recherche: string = "";
   produits: Produit[] = [];
+  utilisateur: Utilisateur | undefined;
 
   constructor(
     private ps: ProduitService,
-    private router: Router) { }
+    private router: Router,
+    private us: UtilisateurService) { }
 
   ngOnInit(): void {
 
@@ -33,5 +36,16 @@ export class MenuComponent implements OnInit {
       // this.ps.resultatsRecherche = [];
     })
 
+  }
+  // accederCompte() {
+  //   if(localStorage.getItem('user') != null) {
+  //     this.utilisateur = JSON.parse(localStorage.getItem('user') ?? "");
+  //     this.router.navigateByUrl(`/compte/${this.utilisateur?.id}`);
+  //   }
+  //   this.router.navigateByUrl('');
+  // }
+
+  seDeconnecter() {
+    localStorage.removeItem('user');
   }
 }

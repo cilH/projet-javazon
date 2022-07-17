@@ -6,15 +6,19 @@
         <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" routerLink="/"><i class="fas fa-user"></i></a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="tab" routerLink="/produit"><i
                             class="fas fa-store"></i></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="tab" routerLink="/panier"><i
                             class="fas fa-shopping-bag"></i></a>
+                </li>
+                <!-- manque id dans le path -->
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" routerLink="/compte/"><i class="fas fa-user"></i></a>
+                </li>
+                <li class="nav-item">
+                    <button (click)="seDeconnecter()"><a class="nav-link" data-bs-toggle="tab" routerLink="/"><i class="fas fa-sign-out-alt"></i></a></button>
                 </li>
             </ul>
             <form class="d-flex">
@@ -28,8 +32,3 @@
         </div>
     </div>
 </nav>
-
-<div class="container miseEnPage mt-4" [hidden]="id == undefined">
-    <button><i style="color: cadetblue" class="fas fa-th-large fa-2xl"></i></button>
-    <button><i style="color: cadetblue" class="fas fa-th-list fa-2xl"></i></button>
-</div>

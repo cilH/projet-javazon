@@ -7,6 +7,7 @@ import { Utilisateur } from '../interfaces/utilisateur';
 })
 export class UtilisateurService {
   private url: string = "http://localhost:5555/utilisateurs";
+
   constructor(private http: HttpClient) { }
 
   getAllUsers() {
@@ -27,5 +28,9 @@ export class UtilisateurService {
 
   removeUser(id: number) {
     return this.http.delete(this.url+"/"+id);
+  }
+
+  checkUser(email: string, password: string) {
+    return this.http.get<Utilisateur[]>(this.url+"?email="+email+"&motDePasse="+password);
   }
 }

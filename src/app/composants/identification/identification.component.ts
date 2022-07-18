@@ -36,8 +36,10 @@ export class IdentificationComponent implements OnInit {
 
   ajouterUtilisateur() {
     this.us.addUser(this.utilisateur).subscribe(res => {
-      this.message = `Bienvenue ${this.utilisateur.prenom} !`;
       this.isIdentified = true;
+      const userString = JSON.stringify(this.us.getOneUser(this.utilisateur.id ?? 0));
+       localStorage.setItem('user', userString)
+          this.router.navigateByUrl(`/compte/${this.utilisateur.id}`);
     })
   }
 

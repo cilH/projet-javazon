@@ -1,3 +1,22 @@
-th {
+input {
     background-color: rgb(209, 231, 221);
+}
+th {
+    text-align: center;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    margin-right: 0px;
+    margin-left: 15px;
+}
+
+.categorie1, .categorie2 {
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.categorie2 {
+    padding-top:30px;
 }

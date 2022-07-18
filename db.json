@@ -137,6 +137,22 @@
       "motDePasse": "peche",
       "adresse": "12 chemin des Cerises, 13012 Marseille",
       "email": "peche.c13@gmail.com"
+    },
+    {
+      "prenom": "Fabien",
+      "nom": "Chartier",
+      "email": "fabien.c06@gmail.com",
+      "motDePasse": "fabien",
+      "adresse": "18 chemin de la plage, 06130 Grasse",
+      "id": 4
+    },
+    {
+      "prenom": "Cecile",
+      "nom": "Heuillet",
+      "email": "cecile.h06@gmail.com",
+      "motDePasse": "cecile",
+      "adresse": "18 chemin de la plage, 06130 Grasse",
+      "id": 5
     }
   ]
 }

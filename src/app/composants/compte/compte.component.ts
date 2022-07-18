@@ -13,6 +13,7 @@ export class CompteComponent implements OnInit {
   id?: number;
   utilisateur: Utilisateur = {};
   message: string = "";
+  isAuthorised: boolean = false;
   constructor(
     private route: ActivatedRoute,
     private us: UtilisateurService) { }
@@ -27,4 +28,19 @@ export class CompteComponent implements OnInit {
     })
   }
 
+  autoriserModification() {
+    this.isAuthorised = true;
+  }
+  
+  modifierUtilisateur() {
+
+  }
+
+  annulerModification() {
+    this.isAuthorised = false;
+  }
+
+  supprimerUtilisateur() {
+
+  }
 }

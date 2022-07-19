@@ -12,8 +12,13 @@ export class ProduitComponent implements OnInit {
   produits: Produit[] = [];
   produit: Produit = {};
   id: number = 0;
-  recherche: string = "";
-  
+  recherche: string | undefined;
+  srcGrandeImage: string = "";
+  srcPetiteImage1: string = "";
+  srcPetiteImage2: string = "";
+  srcAReduire: string = "";
+  srcAAgrandire: string = "";
+
   constructor(
     private ps: ProduitService,
     private route: ActivatedRoute
@@ -27,8 +32,9 @@ export class ProduitComponent implements OnInit {
       if (this.id != 0) {
         this.recupererProduit();
       }
-      else if(this.recherche != "") {
+      else if (this.recherche != "") {
         this.produits = this.ps.resultatsRecherche;
+        console.log(this.ps.resultatsRecherche);
       }
       else {
         this.recupererProduits();
@@ -46,10 +52,34 @@ export class ProduitComponent implements OnInit {
   recupererProduit() {
     this.ps.getOneProduct(this.id).subscribe(res => {
       this.produit = res;
+      this.srcGrandeImage = this.produit.src1 ?? "";
+      this.srcPetiteImage1 = this.produit.src2 ?? "";
+      this.srcPetiteImage2 = this.produit.src3 ?? "";
     })
   }
 
   permuter(no: number) {
-   
+    this.srcAReduire = this.srcGrandeImage;
+    // switch(no) {
+    //   case 1:
+    //     this.srcAAgrandire = this.srcPetiteImage1;
+    //     this.srcPetiteImage1 = this.srcAReduire;
+    //     this.srcGrandeImage = this.srcAAgrandire;
+    //     break;
+    //   case 2:
+    //     this.srcAAgrandire = this.srcPetiteImage2;
+    //     this.srcPetiteImage2 = this.srcAReduire;
+    //     this.srcGrandeImage = this.srcAAgrandire;
+    //     break;
+    // }
+    if(no == 1) {
+      this.srcAAgrandire = this.srcPetiteImage1;
+      this.srcPetiteImage1 = this.srcAReduire;
+    }
+    else {
+      this.srcAAgrandire = this.srcPetiteImage2;
+      this.srcPetiteImage2 = this.srcAReduire;
+    }
+    this.srcGrandeImage = this.srcAAgrandire;
   }
 }

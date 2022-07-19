@@ -7,13 +7,12 @@ import { Produit } from '../interfaces/produit';
 })
 export class ProduitService {
   private url: string = "http://localhost:5555/produits";
-  recherche: string = "";
   resultatsRecherche: Produit[] = [];
   
   constructor(private http: HttpClient) { }
 
   getAllProducts() {
-return this.http.get<Produit[]>(this.url);
+    return this.http.get<Produit[]>(this.url);
   }
 
   getOneProduct(id: number) {
@@ -31,4 +30,14 @@ return this.http.get<Produit[]>(this.url);
   removeProduct(id: number){
     return this.http.delete<Produit>(this.url+"/"+id);
   }
+
+  //searchProducts(s: string): Produit[] {
+    // let produits: Produit[] = this.getAllProducts;
+    // for (const elt of produits) {
+    //     if (elt.designation?.indexOf(s) != null || elt.detail?.indexOf(s) != null) {
+    //       this.resultatsRecherche.push(elt);
+    //       return this.resultatsRecherche;
+    //     }
+    //   }
+  //}
 }

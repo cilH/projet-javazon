@@ -25,6 +25,7 @@ export class MenuComponent implements OnInit {
   }
 
   rechercherProduits(): void {
+    this.ps.resultatsRecherche = [];
     this.ps.getAllProducts().subscribe(res => {
       this.produits = res;
       for (const elt of this.produits) {
@@ -33,7 +34,6 @@ export class MenuComponent implements OnInit {
         }
       }
       this.router.navigateByUrl(`/produit?recherche=${this.recherche}`);
-      // this.ps.resultatsRecherche = [];
     })
 
   }

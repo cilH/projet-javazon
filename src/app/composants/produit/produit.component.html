@@ -28,11 +28,11 @@
             </ng-container>
             <ng-template #details class="focusProduit p-4">
                 <div class="col-4 mt-4">
-                    <div class="row"><img id="grandeImg" [src]="srcGrandeImage" alt="{{ produit.designation }}"></div>
+                    <div class="row"><img id="grandeImg" src="{{ srcGrandeImage }}" alt="{{ produit.designation }}"></div>
                     <div class="miniatures mt-4">
-                        <div><button onclick="permuter(1)"><img id="petiteImg1" [src]="srcPetiteImage1"
+                        <div><button (click)="permuter(1)"><img id="petiteImg1" src="{{ srcPetiteImage1 }}"
                                     alt="{{ produit.designation }}"></button></div>
-                        <div><button onclick="permuter(2)"><img id="petiteImg2" [src]="srcPetiteImage2"
+                        <div><button (click)="permuter(2)"><img id="petiteImg2" src="{{ srcPetiteImage2 }}"
                                     alt="{{ produit.designation }}"></button></div>
                     </div>
                 </div>

@@ -25,7 +25,6 @@ export class ProduitComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // this.route.paramMap.subscribe(res => {
     this.route.queryParamMap.subscribe(res => {
       this.id = Number(res.get('id') ?? 0);
       this.recherche = res.get('recherche') ?? "";
@@ -50,6 +49,7 @@ export class ProduitComponent implements OnInit {
   }
 
   recupererProduit() {
+    this.produit = {};
     this.ps.getOneProduct(this.id).subscribe(res => {
       this.produit = res;
       this.srcGrandeImage = this.produit.src1 ?? "";
@@ -60,18 +60,6 @@ export class ProduitComponent implements OnInit {
 
   permuter(no: number) {
     this.srcAReduire = this.srcGrandeImage;
-    // switch(no) {
-    //   case 1:
-    //     this.srcAAgrandire = this.srcPetiteImage1;
-    //     this.srcPetiteImage1 = this.srcAReduire;
-    //     this.srcGrandeImage = this.srcAAgrandire;
-    //     break;
-    //   case 2:
-    //     this.srcAAgrandire = this.srcPetiteImage2;
-    //     this.srcPetiteImage2 = this.srcAReduire;
-    //     this.srcGrandeImage = this.srcAAgrandire;
-    //     break;
-    // }
     if(no == 1) {
       this.srcAAgrandire = this.srcPetiteImage1;
       this.srcPetiteImage1 = this.srcAReduire;
@@ -81,5 +69,7 @@ export class ProduitComponent implements OnInit {
       this.srcPetiteImage2 = this.srcAReduire;
     }
     this.srcGrandeImage = this.srcAAgrandire;
-  }
+    console.log("this.srcAAgrandire : " + this.srcAAgrandire);
+    }
+  
 }

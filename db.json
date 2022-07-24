@@ -164,12 +164,12 @@
   "detailsCommande": [
     {
       "noCommande": 1,
-      "idProduit": 1,
-      "quantite": 1
+      "idProduit": 3,
+      "quantite": 2
     },
     {
       "noCommande": 1,
-      "idProduit": 5,
+      "idProduit": 8,
       "quantite": 1
     },
     {

@@ -1,3 +1,25 @@
-th {
+th, td {
     text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+img {
+    max-width: 50px;
+}
+
+.quantite {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button {
+    border: none;
+}
+
+.boutons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }

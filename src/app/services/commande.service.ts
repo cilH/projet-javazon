@@ -15,8 +15,12 @@ export class CommandeService {
     return this.http.get<Commande[]>(this.url);
   }
 
-  getOneOrder(nbO: number) {
-    return this.http.get<Commande>(this.url + "?noCommande=" + nbO);
+  // getOneOrder(nbO: number) {
+  //   return this.http.get<Commande>(this.url + "?noCommande=" + nbO);
+  // }
+
+  getOrderByUser(idU: number) {
+    return this.http.get<Commande>(this.url + "?idUtilisateur=" + idU);
   }
 
   addOrder(o: Commande) {

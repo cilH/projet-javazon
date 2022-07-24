@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'produit', component: ProduitComponent },
   { path: 'produit/:id', component: ProduitComponent },
   { path: 'produit/:recherche', component: ProduitComponent },
-  { path: 'panier', component: PanierComponent },
+  { path: 'panier/:noCommande', component: PanierComponent },
   { path: 'erreur', component: ErreurComponent },
   { path: '**', redirectTo: 'erreur' }
 ];

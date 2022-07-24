@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Commande } from 'src/app/interfaces/commande';
+import { Detail } from 'src/app/interfaces/detail';
 import { Produit } from 'src/app/interfaces/produit';
+import { Utilisateur } from 'src/app/interfaces/utilisateur';
+import { CommandeService } from 'src/app/services/commande.service';
+import { DetailService } from 'src/app/services/detail.service';
 import { ProduitService } from 'src/app/services/produit.service';
 
 @Component({
@@ -21,10 +26,16 @@ export class ProduitComponent implements OnInit {
   srcPetiteImage2: string = "";
   srcAReduire: string = "";
   srcAAgrandire: string = "";
+  utilisateur: Utilisateur = {};
+  noCommande: number = 0;
+  commandeEnCours: Commande = {};
+  detailCommande: Detail = {};
 
   constructor(
     private ps: ProduitService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private ds: DetailService,
+    private cs: CommandeService
   ) { }
 
   ngOnInit(): void {
@@ -96,5 +107,18 @@ export class ProduitComponent implements OnInit {
     }
   }
 
-
+  ajouterPanier() {
+    // if(localStorage.getItem('user') != null) {
+    //   this.utilisateur = JSON.parse(localStorage.getItem('user') ?? "");
+    //   this.cs.getOrderByUser(this.utilisateur.id ?? 0).subscribe(res => {
+    //     this.commandeEnCours = res;
+    //   })
+    // }
+    // if(this.commandeEnCours != null) {
+    //   this.ds.addOrderDetails(this.detailCommande).subscribe(res => {
+        
+    //   })
+    // }
+    
+  }
 }

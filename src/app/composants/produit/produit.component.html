@@ -44,7 +44,7 @@
                         </li>
                         <li class="mb-4">
                             <h4>{{ produit.designation }}</h4>
-                            <div><i class="fas fa-cart-arrow-down fa-2xl"></i></div>
+                            <div><button class="btn btn-primary btn-outline-primary" (click)="ajouterPanier()"><i class="fas fa-cart-arrow-down fa-2xl"></i></button></div>
                         </li>
                         <li class="mb-2">Prix unitaire : {{ produit.prixUnitaire }} €</li>
                         <li class="mb-2"><button><i class="fas fa-heart"></i></button> : {{ produit.like }}</li>

@@ -11,9 +11,11 @@ a {
 ul {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 .fas {
     padding-right: 8px;
+    color: white;
 }
 
 .navbar {

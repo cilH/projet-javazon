@@ -37,13 +37,15 @@ export class MenuComponent implements OnInit {
     })
 
   }
-  // accederCompte() {
-  //   if(localStorage.getItem('user') != null) {
-  //     this.utilisateur = JSON.parse(localStorage.getItem('user') ?? "");
-  //     this.router.navigateByUrl(`/compte/${this.utilisateur?.id}`);
-  //   }
-  //   this.router.navigateByUrl('');
-  // }
+  accederCompte() {
+    if(localStorage.getItem('user') != null) {
+      this.utilisateur = JSON.parse(localStorage.getItem('user') ?? "");
+      this.router.navigateByUrl(`/compte/${this.utilisateur?.id}`);
+    }
+    else {
+      this.router.navigateByUrl(``);
+    }
+  }
 
   seDeconnecter() {
     localStorage.removeItem('user');

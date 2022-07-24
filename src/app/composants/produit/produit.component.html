@@ -1,13 +1,13 @@
 <h2 class="container">Produit</h2>
-<section>
+<section (load)="afficherProduits()">
     <!-- <div class="container miseEnPage mt-4" [hidden]="">
         <button><i style="color: cadetblue" class="fas fa-th-large fa-2xl"></i></button>
         <button><i style="color: cadetblue" class="fas fa-th-list fa-2xl"></i></button>
     </div> -->
     <div class="container">
         <ul class="row">
-            <ng-container *ngIf="id == 0 || recherche != '', else details">
-            <!-- <ng-container *ngIf="id == 0  || recherche != null, else details"></ng-container> -->
+            <ng-container *ngIf="id == 0 || recherche != undefined, else details">
+                <!-- <ng-container *ngIf="id == 0  || recherche != null, else details"></ng-container> -->
                 <li class="col-xl-6 col-sm-12 produit p-4 mt-1" *ngFor="let elt of produits">
                     <div class="col-6"><a href="/produit?id={{ elt.id }}"><img src="{{ elt.src1 }}"
                                 alt="{{ elt.designation }}"></a></div>
@@ -28,7 +28,8 @@
             </ng-container>
             <ng-template #details class="focusProduit p-4">
                 <div class="col-4 mt-4">
-                    <div class="row"><img id="grandeImg" src="{{ srcGrandeImage }}" alt="{{ produit.designation }}"></div>
+                    <div class="row"><img id="grandeImg" src="{{ srcGrandeImage }}" alt="{{ produit.designation }}">
+                    </div>
                     <div class="miniatures mt-4">
                         <div><button (click)="permuter(1)"><img id="petiteImg1" src="{{ srcPetiteImage1 }}"
                                     alt="{{ produit.designation }}"></button></div>
@@ -49,6 +50,44 @@
                         <li class="mb-2"><button><i class="fas fa-heart"></i></button> : {{ produit.like }}</li>
                         <li class="detail mb-4">Informations produit : {{ produit.detail }}</li>
                     </ul>
+                </div>
+
+                <div class="suggestions">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <img src="..." class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="...">
+
+                            </div>
+
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
             </ng-template>
         </ul>

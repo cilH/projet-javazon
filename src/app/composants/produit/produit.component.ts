@@ -10,9 +10,12 @@ import { ProduitService } from 'src/app/services/produit.service';
 })
 export class ProduitComponent implements OnInit {
   produits: Produit[] = [];
+  produitsAAfficher: Produit[] = [];
   produit: Produit = {};
   id: number = 0;
   recherche: string | undefined;
+  resultatsRecherche: Produit[] = [];
+  produitsSuggeres: Produit[] = [];
   srcGrandeImage: string = "";
   srcPetiteImage1: string = "";
   srcPetiteImage2: string = "";
@@ -27,19 +30,9 @@ export class ProduitComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParamMap.subscribe(res => {
       this.id = Number(res.get('id') ?? 0);
-      this.recherche = res.get('recherche') ?? "";
-      if (this.id != 0) {
-        this.recupererProduit();
-      }
-      else if (this.recherche != "") {
-        this.produits = this.ps.resultatsRecherche;
-        console.log(this.ps.resultatsRecherche);
-      }
-      else {
-        this.recupererProduits();
-      }
+      this.recherche = res.get('recherche') ?? undefined;
+      this.afficherProduits();
     })
-    this.produits = [];
   }
 
   recupererProduits() {
@@ -60,7 +53,7 @@ export class ProduitComponent implements OnInit {
 
   permuter(no: number) {
     this.srcAReduire = this.srcGrandeImage;
-    if(no == 1) {
+    if (no == 1) {
       this.srcAAgrandire = this.srcPetiteImage1;
       this.srcPetiteImage1 = this.srcAReduire;
     }
@@ -69,7 +62,39 @@ export class ProduitComponent implements OnInit {
       this.srcPetiteImage2 = this.srcAReduire;
     }
     this.srcGrandeImage = this.srcAAgrandire;
-    console.log("this.srcAAgrandire : " + this.srcAAgrandire);
+  }
+
+  rechercherProduit(expression: string) {
+    this.resultatsRecherche = [];
+    this.recupererProduits();
+    for (const elt of this.produits) {
+      if (elt.designation?.includes(expression) != false || elt.detail?.includes(expression) != false) {
+        this.resultatsRecherche.push(elt);
+      }
     }
-  
+    this.produits = this.resultatsRecherche;
+    console.log(this.resultatsRecherche);
+  }
+
+  afficherProduits() {
+    if (this.id != 0) {
+      this.recupererProduit();
+      this.recupererProduits();
+      for (const elt of this.produits) {
+        if (elt.categorieProduit == this.produit.categorieProduit) {
+          this.produitsSuggeres.push(elt);
+        }
+      }
+      console.log(this.produitsSuggeres);
+    }
+    else if (this.recherche != undefined) {
+      this.rechercherProduit(this.recherche);
+      console.log(this.recherche);
+    }
+    else {
+      this.recupererProduits();
+    }
+  }
+
+
 }

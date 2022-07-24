@@ -7,6 +7,7 @@ import { Produit } from '../interfaces/produit';
 })
 export class ProduitService {
   private url: string = "http://localhost:5555/produits";
+  produits: Produit[] = [];
   resultatsRecherche: Produit[] = [];
   
   constructor(private http: HttpClient) { }
@@ -30,14 +31,4 @@ export class ProduitService {
   removeProduct(id: number){
     return this.http.delete<Produit>(this.url+"/"+id);
   }
-
-  //searchProducts(s: string): Produit[] {
-    // let produits: Produit[] = this.getAllProducts;
-    // for (const elt of produits) {
-    //     if (elt.designation?.indexOf(s) != null || elt.detail?.indexOf(s) != null) {
-    //       this.resultatsRecherche.push(elt);
-    //       return this.resultatsRecherche;
-    //     }
-    //   }
-  //}
 }

@@ -23,7 +23,7 @@ export class UtilisateurService {
   }
 
   updateUser(u: Utilisateur) {
-    return this.http.post(this.url+"/"+u.id, u);
+    return this.http.put(this.url+"/"+u.id, u);
   }
 
   removeUser(id: number) {

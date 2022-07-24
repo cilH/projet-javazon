@@ -3,11 +3,9 @@
     <h2 class="col-5">Compte</h2>
     <div class="boutons">
       <button [hidden]="isAuthorised" (click)="autoriserModification()" class="btn btn-secondary">Modifier</button>
-      <button [hidden]="!isAuthorised" class="btn btn-secondary">Valider modifications</button>
+      <!-- <button [hidden]="!isAuthorised" [disabled]="formModification.invalid" class="btn btn-secondary">Valider modifications</button> -->
       <button [hidden]="isAuthorised" (click)="supprimerUtilisateur()" style="color: white;"
         class="btn btn-light btn-outline-secondary text-dark">Supprimer compte</button>
-      <button [hidden]="!isAuthorised" (click)="annulerModification()" style="color: white;"
-        class="btn btn-light btn-outline-secondary text-dark">Annuler</button>
     </div>
   </div>
 
@@ -44,5 +42,10 @@
             name="adresse" [readonly]="!isAuthorised" required [(ngModel)]="utilisateur.adresse" #adresse="ngModel"></td>
       </tr>
     </table>
+    <div class="boutonsForm">
+      <button [hidden]="!isAuthorised" [disabled]="formModification.invalid" class="btn btn-secondary">Valider modifications</button>
+      <button [hidden]="!isAuthorised" (click)="annulerModification()" style="color: white;"
+          class="btn btn-light btn-outline-secondary text-dark">Annuler</button>
+    </div>
   </form>
 </div>

@@ -34,6 +34,13 @@ export class CompteComponent implements OnInit {
   }
 
   modifierUtilisateur() {
+    this.us.updateUser(this.utilisateur).subscribe(res => {
+      this.message = "Vos modifications ont bien été prises en compte !";
+      console.log(this.message);
+      this.isAuthorised = false;
+      console.log(this.isAuthorised);
+      // this.router.navigateByUrl(`compte?id=${this.utilisateur.id}`);
+    })
 
   }
 

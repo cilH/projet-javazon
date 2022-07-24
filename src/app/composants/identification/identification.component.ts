@@ -36,6 +36,7 @@ export class IdentificationComponent implements OnInit {
 
   ajouterUtilisateur() {
     this.us.addUser(this.utilisateur).subscribe(res => {
+      this.utilisateur = res;
       this.isIdentified = true;
       const userString = JSON.stringify(this.us.getOneUser(this.utilisateur.id ?? 0));
        localStorage.setItem('user', userString)

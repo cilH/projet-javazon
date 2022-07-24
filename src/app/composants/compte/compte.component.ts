@@ -39,7 +39,6 @@ export class CompteComponent implements OnInit {
       console.log(this.message);
       this.isAuthorised = false;
       console.log(this.isAuthorised);
-      // this.router.navigateByUrl(`compte?id=${this.utilisateur.id}`);
     })
 
   }

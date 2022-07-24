@@ -9,7 +9,7 @@ export class ProduitService {
   private url: string = "http://localhost:5555/produits";
   produits: Produit[] = [];
   resultatsRecherche: Produit[] = [];
-  
+
   constructor(private http: HttpClient) { }
 
   getAllProducts() {
@@ -17,18 +17,18 @@ export class ProduitService {
   }
 
   getOneProduct(id: number) {
-    return this.http.get<Produit>(this.url+"/"+id);
+    return this.http.get<Produit>(this.url + "/" + id);
   }
 
-  addProduct(p: Produit){
+  addProduct(p: Produit) {
     return this.http.post<Produit>(this.url, p);
   }
 
-  updateProduct(p: Produit){
-    return this.http.put<Produit>(this.url+"/"+p.id, p);
+  updateProduct(p: Produit) {
+    return this.http.put<Produit>(this.url + "/" + p.id, p);
   }
 
-  removeProduct(id: number){
-    return this.http.delete<Produit>(this.url+"/"+id);
+  removeProduct(id: number) {
+    return this.http.delete<Produit>(this.url + "/" + id);
   }
 }

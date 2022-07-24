@@ -15,7 +15,7 @@ export class UtilisateurService {
   }
 
   getOneUser(id: number) {
-    return this.http.get<Utilisateur>(this.url+"/"+id);
+    return this.http.get<Utilisateur>(this.url + "/" + id);
   }
 
   addUser(u: Utilisateur) {
@@ -23,14 +23,14 @@ export class UtilisateurService {
   }
 
   updateUser(u: Utilisateur) {
-    return this.http.put(this.url+"/"+u.id, u);
+    return this.http.put(this.url + "/" + u.id, u);
   }
 
   removeUser(id: number) {
-    return this.http.delete(this.url+"/"+id);
+    return this.http.delete(this.url + "/" + id);
   }
 
   checkUser(email: string, password: string) {
-    return this.http.get<Utilisateur[]>(this.url+"?email="+email+"&motDePasse="+password);
+    return this.http.get<Utilisateur[]>(this.url + "?email=" + email + "&motDePasse=" + password);
   }
 }

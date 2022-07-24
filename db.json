@@ -154,5 +154,28 @@
       "adresse": "18 chemin de la plage, 06130 Grasse",
       "id": 5
     }
+  ],
+  "commandes": [
+    {
+      "noCommande": 1,
+      "idUtilisateur": 4
+    }
+  ],
+  "detailsCommande": [
+    {
+      "noCommande": 1,
+      "idProduit": 1,
+      "quantite": 1
+    },
+    {
+      "noCommande": 1,
+      "idProduit": 5,
+      "quantite": 1
+    },
+    {
+      "noCommande": 1,
+      "idProduit": 7,
+      "quantite": 1
+    }
   ]
 }

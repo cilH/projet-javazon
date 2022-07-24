@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Utilisateur } from 'src/app/interfaces/utilisateur';
 import { UtilisateurService } from 'src/app/services/utilisateur.service';
 
@@ -16,7 +16,8 @@ export class CompteComponent implements OnInit {
   isAuthorised: boolean = false;
   constructor(
     private route: ActivatedRoute,
-    private us: UtilisateurService) { }
+    private us: UtilisateurService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(res => {
@@ -31,7 +32,7 @@ export class CompteComponent implements OnInit {
   autoriserModification() {
     this.isAuthorised = true;
   }
-  
+
   modifierUtilisateur() {
 
   }
@@ -41,6 +42,10 @@ export class CompteComponent implements OnInit {
   }
 
   supprimerUtilisateur() {
-
+    this.us.removeUser(this.id ?? 0).subscribe(res => {
+      this.message = "Votre compte a bien été supprimé";
+      console.log(this.message);
+      this.router.navigateByUrl("");
+    })
   }
 }
